@@ -1,3 +1,5 @@
+Podcast: [Watch on YouTube](https://youtu.be/w1cIrrOJACQ)
+
 # No This Is It
 
 This repository contains an exported conversation that starts with a question about finding a recently watched video in Chrome, then grows into a humorous, increasingly elaborate role-play about a unified, portable AI across Chrome, email, Android, and VS Code.
