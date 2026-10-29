@@ -8,6 +8,8 @@ The conversation ranges from AI access to browsing history to speculative ideas 
 
 [Watch the podcast on YouTube](https://youtu.be/w1cIrrOJACQ)
 
+
+[Listen to the UMA paper recital on YouTube](https://youtu.be/Mh48SSVghkg)
 ## Files
 
 - [NotThisIsIt.txt](NotThisIsIt.txt) — the conversation in text form.
