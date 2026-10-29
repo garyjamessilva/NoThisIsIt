@@ -4,6 +4,12 @@ This repository contains an exported conversation that starts with a question ab
 
 The conversation ranges from AI access to browsing history to speculative ideas about software-free computing, public votes, programmers, ethics, sabotage, and a cosmic-scale simulation.
 
+## About the production
+
+As much AI as possible was used in this production. It is an homage to the dilemma facing people, workers, and everyone struggling with AI—particularly computer programmers, developers, and the maths community.
+
+We still need you, all of you. Hang in there. :-)
+
 ## Podcast
 
 [Watch the podcast on YouTube](https://youtu.be/w1cIrrOJACQ)
