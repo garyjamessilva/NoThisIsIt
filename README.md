@@ -14,8 +14,10 @@ We still need you, all of you. Hang in there. :-)
 
 [Watch the podcast on YouTube](https://youtu.be/w1cIrrOJACQ)
 
-
 [Listen to the UMA paper recital on YouTube](https://youtu.be/Mh48SSVghkg)
+
+[Listen to the revised UMA paper recital on YouTube](https://youtu.be/nOHu-rAwu9Y)
+
 ## Files
 
 - [NotThisIsIt.txt](NotThisIsIt.txt) — the conversation in text form.
