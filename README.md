@@ -29,6 +29,8 @@ This project is beginning to collect additional papers, simulations, and other f
 - [unified_morphing_architectures_paper_v2.pdf](unified_morphing_architectures_paper_v2.pdf) — the theoretical UMA paper.
 - [unified_morphing_architectures_revised_draft_20261103.pdf](unified_morphing_architectures_revised_draft_20261103.pdf) — the revised UMA draft.
 - [unified_morphing_architectures_revised_draft_20261103_v2.pdf](unified_morphing_architectures_revised_draft_20261103_v2.pdf) — a later revised UMA draft.
+- [UMA_Spatial_Temporal_Binding.pdf](UMA_Spatial_Temporal_Binding.pdf) — an exploration of spatial-temporal binding focused on timestamped logging.
+- [UMA_Boot_Hello_World_Final.pdf](UMA_Boot_Hello_World_Final.pdf) — a UMA boot and Hello World example.
 - [uma_sim.py](uma_sim.py) — the UMA micro-burst simulator.
 - [results.md](results.md) — simulator results and experiment assumptions.
 
