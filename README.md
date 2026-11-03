@@ -21,6 +21,7 @@ We still need you, all of you. Hang in there. :-)
 - [NotThisIsIt.txt](NotThisIsIt.txt) — the conversation in text form.
 - [NotThisIsIt.pdf](NotThisIsIt.pdf) — a PDF copy of the conversation.
 - [unified_morphing_architectures_paper_v2.pdf](unified_morphing_architectures_paper_v2.pdf) — the theoretical UMA paper.
+- [unified_morphing_architectures_revised_draft_20261103.pdf](unified_morphing_architectures_revised_draft_20261103.pdf) — the revised UMA draft.
 
 ## Note
 
