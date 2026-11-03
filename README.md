@@ -14,16 +14,19 @@ We still need you, all of you. Hang in there. :-)
 
 [Watch the podcast on YouTube](https://youtu.be/w1cIrrOJACQ)
 
+
 [Listen to the UMA paper recital on YouTube](https://youtu.be/Mh48SSVghkg)
 
 [Listen to the revised UMA paper recital on YouTube](https://youtu.be/nOHu-rAwu9Y)
-
 ## Files
 
 - [NotThisIsIt.txt](NotThisIsIt.txt) — the conversation in text form.
 - [NotThisIsIt.pdf](NotThisIsIt.pdf) — a PDF copy of the conversation.
 - [unified_morphing_architectures_paper_v2.pdf](unified_morphing_architectures_paper_v2.pdf) — the theoretical UMA paper.
 - [unified_morphing_architectures_revised_draft_20261103.pdf](unified_morphing_architectures_revised_draft_20261103.pdf) — the revised UMA draft.
+- [unified_morphing_architectures_revised_draft_20261103_v2.pdf](unified_morphing_architectures_revised_draft_20261103_v2.pdf) — a later revised UMA draft.
+- [uma_sim.py](uma_sim.py) — the UMA micro-burst simulator.
+- [results.md](results.md) — simulator results and experiment assumptions.
 
 ## Note
 
