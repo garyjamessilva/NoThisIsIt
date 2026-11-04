@@ -1,0 +1,68 @@
+ISA encode/decode round-trip ok
+model: 301 table contexts, 37 learned tokens, 51 noise vocabulary
+
+== E1  cold boot to Hello World (cache on, admit K=8, std quantisation, noise 3%) ==
+output correct: True   pulses 61   hits 56   rejects 1   aborts 2   cursor events 3
+total 16.8 us   native equivalent 2.63 us   slowdown 6.4x
+first pulse of each intent, as synthesised:
+  COPY   block 7bb154b1  t=0..4135 ns
+      00054383  lbu   t2,0(a0)
+      00758023  sb    t2,0(a1)
+      00154383  lbu   t2,1(a0)
+      00758023  sb    t2,0(a1)
+      00254383  lbu   t2,2(a0)
+      00758023  sb    t2,0(a1)
+      00354383  lbu   t2,3(a0)
+      00758023  sb    t2,0(a1)
+      00450513  addi  a0,a0,4
+      ffc60613  addi  a2,a2,-4
+  CURSOR block 3fa9e081  t=5047..6295 ns
+      00072303  lw    t1,0(a4)
+      00f34333  xor   t1,t1,a5
+      00672023  sw    t1,0(a4)
+      00082023  sw    zero,0(a6)
+  SUM    block 6bb371a3  t=10030..12985 ns
+      00054383  lbu   t2,0(a0)
+      007686b3  add   a3,a3,t2
+      00154383  lbu   t2,1(a0)
+      007686b3  add   a3,a3,t2
+      00254383  lbu   t2,2(a0)
+      007686b3  add   a3,a3,t2
+      00354383  lbu   t2,3(a0)
+      007686b3  add   a3,a3,t2
+      00450513  addi  a0,a0,4
+      ffc60613  addi  a2,a2,-4
+trace: 62 entries, hash chain verifies: True
+replay from block table + log reproduces every checkpoint state hash: True
+tamper with one time stamp -> chain verifies: False (detected at seq 31)
+tamper with a block id -> chain verifies: False
+
+== E2  cache design (40 seeds, model noise 3% per token, irq every 5 us, abort fast path) ==
+wrong = bursts whose real effect differed from the intended transition (ground-truth audit); trap = bursts that faulted
+config                                        slowdown   hit%   rej/p   wrong   trap    ok% runaw%
+no cache                                         45.6x    0.0    0.41    0.00   0.00    100      0
+cache, std key, admit K=0                         4.2x   91.6    0.03    0.00   0.00    100      0
+cache, std key, admit K=8                         7.1x   91.8    0.04    0.00   0.00    100      0
+cache, std key, admit K=32                      278.8x   99.6    0.36    0.00   0.00      0    100
+cache, COARSE key, admit K=0                      1.5x   99.3    0.00    1.00 207.85      0    100
+cache, COARSE key, admit K=8                      1.9x   99.1    0.00    1.00 207.15      0    100
+cache, COARSE key, admit K=32                   278.8x   99.6    0.37    0.00   0.00      0    100
+cache, COARSE key, K=8, hit guard (shadow)       12.9x   90.8    0.04    0.00   0.00    100      0
+cache, std key, K=0, hit guard (shadow)           8.2x   91.9    0.03    0.00   0.00    100      0
+
+== E3  synthesiser noise (cache on, std key, admit K=8) ==
+config                                        slowdown   hit%   rej/p   wrong   trap    ok% runaw%
+noise 0.00 per token                              6.4x   91.8    0.00    0.00   0.00    100      0
+noise 0.01 per token                              6.6x   91.8    0.01    0.00   0.00    100      0
+noise 0.03 per token                              7.1x   91.8    0.04    0.00   0.00    100      0
+noise 0.08 per token                              9.2x   91.9    0.13    0.00   0.00    100      0
+noise 0.15 per token                             20.0x   92.4    0.53    0.00   0.00    100      0
+noise 0.30 per token                            143.5x   97.9    2.54    0.00   0.00     98      2
+reject reasons, cache off, noise 0.08: transition 4137, too 989, trap 824, opcode 443, empty 25, branch 11
+
+== E4  interrupt latency, timer every 3 us (ns; latency = event to end of handler burst) ==
+config                                             p50       p99       max  discard%  slowdown
+cache off, wait for checkpoint                    1637      5938      8392       0.0     41.2x
+cache off, abort in-flight synthesis               603      2123      3423      38.9     55.4x
+cache on, wait for checkpoint                     1260      6423      6434       0.0      6.0x
+cache on, abort in-flight synthesis                 30      1828      2068      35.4      8.2x
