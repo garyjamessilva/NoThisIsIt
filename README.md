@@ -34,6 +34,8 @@ This project is beginning to collect additional papers, simulations, and other f
 - [UMA_Boot_Hello_World_Final.pdf](UMA_Boot_Hello_World_Final.pdf) — a UMA boot and Hello World example.
 - [uma_sim.py](uma_sim.py) — the UMA micro-burst simulator.
 - [results.md](results.md) — simulator results and experiment assumptions.
+- [uma_sim2.py](uma_sim2.py) — a second, more detailed UMA simulator exploring instruction execution, token synthesis, caching, and trace integrity.
+- [uma_results.txt](uma_results.txt) — output from the second simulator's exploratory experiments; timing constants are placeholders.
 
 ## Note
 
