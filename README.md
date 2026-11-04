@@ -14,6 +14,12 @@ We still need you, all of you. Hang in there. :-)
 
 This project is beginning to collect additional papers, simulations, and other files that explore how some ideas from the conversation might be realized—especially CPU and hardware designs that could reduce reliance on conventional software. Think of these as entries in a running captain's log: exploratory work in progress, not a finished or validated implementation.
 
+## Special cautionary note: AI reliability
+
+This redacted email export records the author's experience while trying to continue UMA-related work with Google's Gemini. It is included as a cautionary case study: a chatbot can produce confident, plausible-sounding but unsupported or incorrect claims, and relying on them without checking the source material can derail further work. The exchange reflects the author's experience; it is not an independent evaluation and does not establish that the model intended to lie or deceive. Verify technical claims against original files, reproducible tests, and independent sources.
+
+[Read the redacted Gemini exchange](Gemini_Cautionary_Exchange_Redacted.pdf) — contact details and Gmail message identifiers have been removed.
+
 ## Podcast
 
 [Watch the podcast on YouTube](https://youtu.be/w1cIrrOJACQ)
